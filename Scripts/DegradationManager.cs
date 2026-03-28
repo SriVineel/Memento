@@ -25,7 +25,6 @@ public class DegradationManager : MonoBehaviour
         // Classic singleton pattern — same idea as C++ static instance
         if (Instance != null && Instance != this) { Destroy(gameObject); return; }
         Instance = this;
-        DontDestroyOnLoad(gameObject); // persist across scenes
     }
 
     // Call this to move to the next act
