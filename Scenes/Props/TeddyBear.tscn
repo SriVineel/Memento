@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cbxf7s6u6nni4"]
+
+[ext_resource type="PackedScene" uid="uid://chr5an4vf130f" path="res://Assets/TeddyBear/scene.gltf" id="1_bi88k"]
+[ext_resource type="Script" uid="uid://xyw5sc01572q" path="res://Scenes/Props/interactable_item.gd" id="1_pqu1i"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pqu1i"]
+size = Vector3(0.36799622, 0.4460783, 0.32474518)
+
+[node name="TeddyBear" type="StaticBody3D" unique_id=1618836752]
+script = ExtResource("1_pqu1i")
+
+[node name="Sketchfab_Scene" parent="." unique_id=1485956743 instance=ExtResource("1_bi88k")]
+transform = Transform3D(0.001, 0, 0, 0, 0.001, 0, 0, 0, 0.001, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2090432791]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.014595032, 0.11434603, 0.056735992)
+shape = SubResource("BoxShape3D_pqu1i")

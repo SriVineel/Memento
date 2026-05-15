@@ -1,0 +1,119 @@
+[gd_scene format=3 uid="uid://ewm7rg8p8slo"]
+
+[ext_resource type="Script" uid="uid://cyn15nb87icnv" path="res://Scenes/Environments/BirthdayRoom/birthday_room.gd" id="1_2t1u8"]
+[ext_resource type="PackedScene" uid="uid://bdb4a8stxx5pr" path="res://Assets/Table/scene.gltf" id="1_7blf7"]
+[ext_resource type="PackedScene" uid="uid://bvackfplerpny" path="res://Assets/birthday_room/scene.gltf" id="1_fc05u"]
+[ext_resource type="PackedScene" uid="uid://dws37c8ra2vn" path="res://Assets/party/scene.gltf" id="1_hu8fo"]
+[ext_resource type="PackedScene" uid="uid://dh8rof8701idr" path="res://Assets/carpet/scene.gltf" id="3_tpyfx"]
+[ext_resource type="PackedScene" uid="uid://omk606ae6x1s" path="res://Assets/Cake/scene.gltf" id="4_hu8fo"]
+[ext_resource type="PackedScene" uid="uid://b3dhaufkmq0tp" path="res://Assets/baloons/scene.gltf" id="6_bilrn"]
+[ext_resource type="PackedScene" uid="uid://dmumcteknr7jr" path="res://Scenes/Characters/party/boy_1.tscn" id="8_k3pxy"]
+[ext_resource type="PackedScene" uid="uid://c1yyubwf7wv70" path="res://Scenes/Characters/party/boy_2.tscn" id="9_2t1u8"]
+[ext_resource type="PackedScene" uid="uid://ccr626chh46w" path="res://Scenes/Characters/party/girl_1.tscn" id="10_doptd"]
+[ext_resource type="PackedScene" uid="uid://ccscpgmm1au6y" path="res://Scenes/Characters/party/girl_2.tscn" id="11_jxpd2"]
+[ext_resource type="PackedScene" uid="uid://3smlykg0jadr" path="res://Scenes/Characters/party/teeng.tscn" id="11_k3pxy"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hu8fo"]
+size = Vector3(2.8, 1, 1.8)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fc05u"]
+size = Vector3(100, 2, 100)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bilrn"]
+size = Vector3(16.493134, 4.6487427, 0.5)
+
+[node name="BirthdayRoom" type="Node3D" unique_id=169685223]
+script = ExtResource("1_2t1u8")
+
+[node name="party" parent="." unique_id=775931225 instance=ExtResource("1_hu8fo")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 3.4635546, -1.762988)
+
+[node name="party2" parent="." unique_id=1386370040 instance=ExtResource("1_hu8fo")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 1.2248759, 3.4635546, -1.7994752)
+
+[node name="party3" parent="." unique_id=2009191685 instance=ExtResource("1_hu8fo")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 1.2248759, 3.4635546, 2.3018808)
+
+[node name="party4" parent="." unique_id=1636385373 instance=ExtResource("1_hu8fo")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -0.19439363, 3.4635546, 2.3018808)
+
+[node name="table" parent="." unique_id=1488891334 instance=ExtResource("1_7blf7")]
+transform = Transform3D(-6.556708e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.556708e-08, 2.3508937, 0.2714634, 0.37570643)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="table" unique_id=1876476843]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="table/StaticBody3D" unique_id=1436281874]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4847831, 0)
+shape = SubResource("BoxShape3D_hu8fo")
+
+[node name="room" parent="." unique_id=445301207 instance=ExtResource("1_fc05u")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="room" unique_id=512728443]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="room/StaticBody3D" unique_id=1396009713]
+shape = SubResource("BoxShape3D_fc05u")
+
+[node name="carpet" parent="." unique_id=426335907 instance=ExtResource("3_tpyfx")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -3.2269573, 0.28647685, 0.32426107)
+
+[node name="cake" parent="." unique_id=2062919723 instance=ExtResource("4_hu8fo")]
+transform = Transform3D(1.75, 0, 0, 0, 1.75, 0, 0, 0, 1.75, 2.3414805, 1.2243096, 0.51189804)
+
+[node name="bloons" parent="." unique_id=315159758 instance=ExtResource("6_bilrn")]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 7.097481, 2.2154598, 0.046735883)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1926732067]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6896186, -6.274505)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1542473400]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.042236328, 0.6166687, 0)
+shape = SubResource("BoxShape3D_bilrn")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" unique_id=272154888]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 8.085414, 0.6166687, 6.3485537)
+shape = SubResource("BoxShape3D_bilrn")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D" unique_id=1472482128]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.10366678, 0.6166687, 12.6850605)
+shape = SubResource("BoxShape3D_bilrn")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1620340307]
+transform = Transform3D(0.79545236, 0.263319, 0.54581934, 0.0011528879, -0.9013238, 0.43314433, 0.60601515, -0.34391645, -0.71726364, 7.562337, 4.540526, -6.4563713)
+
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="." unique_id=1631888378]
+transform = Transform3D(-0.8675129, 0.21455073, 0.44876444, 0.0011528756, -0.9013238, 0.43314445, 0.49741358, 0.37627584, 0.7816626, 7.562337, 4.540526, 6.8671017)
+
+[node name="boy1" parent="." unique_id=1798149554 instance=ExtResource("8_k3pxy")]
+transform = Transform3D(0.27779302, 0, -1.9806138, 0, 2, 0, 1.9806138, 0, 0.27779302, -4.3490715, 0.2728963, 0)
+
+[node name="boy2" parent="." unique_id=1839334072 instance=ExtResource("9_2t1u8")]
+transform = Transform3D(-0.5555702, 0, -0.83146966, 0, 1, 0, 0.83146966, 0, -0.5555702, -2.3684316, 0.66054654, 4.066102)
+
+[node name="girl1" parent="." unique_id=352995937 instance=ExtResource("10_doptd")]
+transform = Transform3D(0.77724934, 0, -0.91426665, 0, 1.2, 0, 0.91426665, 0, 0.77724934, -0.3131404, 0, -4.059844)
+
+[node name="girl2" parent="." unique_id=652767591 instance=ExtResource("11_jxpd2")]
+transform = Transform3D(0.4114508, 0, -0.91143197, 0, 1, 0, 0.91143197, 0, 0.4114508, 5.4483175, 0, -2.0740027)
+
+[node name="teeng" parent="." unique_id=1630848788 instance=ExtResource("11_k3pxy")]
+transform = Transform3D(-0.015915185, 0, 1.0998849, 0, 1.1, 0, -1.0998849, 0, -0.015915185, -6, 0.28768682, 0)
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1146360607]
+transform = Transform3D(0.6136378, 0, -0.78958774, 0, 1, 0, 0.78958774, 0, 0.6136378, -6.2911954, 1.4529657, 3.4322548)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=249895997]
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=177055512]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -73.0
+offset_right = 73.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 0.78431374, 0.19607843, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 18
+text = "Playing Memories.."
+horizontal_alignment = 1

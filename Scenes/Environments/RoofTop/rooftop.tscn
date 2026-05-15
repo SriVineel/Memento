@@ -1,0 +1,36 @@
+[gd_scene load_steps=8 format=3 uid="uid://fihn64qyyrg4"]
+
+[ext_resource type="Texture2D" uid="uid://loigrek6510i" path="res://Assets/rooftop/kiara_1_dawn_4k.exr" id="1_8qlwl"]
+[ext_resource type="PackedScene" uid="uid://bogqfrcuqeh0o" path="res://Scenes/Environments/RoofTop/roof.tscn" id="2_lctfe"]
+[ext_resource type="PackedScene" uid="uid://djso8yqaiwdet" path="res://Scenes/Characters/OldLady/OldLady.tscn" id="3_d6nqk"]
+[ext_resource type="PackedScene" uid="uid://baucl0br58big" path="res://Scenes/Props/flowerpot.tscn" id="4_d6nqk"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_3lfpi"]
+panorama = ExtResource("1_8qlwl")
+
+[sub_resource type="Sky" id="Sky_lctfe"]
+sky_material = SubResource("PanoramaSkyMaterial_3lfpi")
+
+[sub_resource type="Environment" id="Environment_d6nqk"]
+background_mode = 2
+sky = SubResource("Sky_lctfe")
+
+[node name="WorldEnvironment" type="WorldEnvironment"]
+environment = SubResource("Environment_d6nqk")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.97195685, -0.06617464, 0.22565608, 5.271432e-10, 0.9595894, 0.28140372, -0.23515896, 0.2735123, -0.9326796, 0, 12.129595, -29.550201)
+shadow_enabled = true
+
+[node name="Roof" parent="." instance=ExtResource("2_lctfe")]
+transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 0, 0, 0)
+
+[node name="OldLady" parent="." instance=ExtResource("3_d6nqk")]
+transform = Transform3D(-0.19475543, 0, 1.0826219, 0, 1.1, 0, -1.0826219, 0, -0.19475543, -4.3294644, 1.0375942, -1.9975605)
+
+[node name="Flowerpot" parent="." instance=ExtResource("4_d6nqk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8773623, 0.3100376, 2.135457)
+memory_scene_path = "uid://btbf7b5uaojqq"
+
+[node name="Spawn_AfterMemory" type="Marker3D" parent="."]
+transform = Transform3D(0.9317546, 0, -0.3630886, 0, 1, 0, 0.3630886, 0, 0.9317546, -0.33190322, 0.053119123, 1.1145542)

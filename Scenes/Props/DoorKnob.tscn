@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://ddaxshij57v56"]
+
+[ext_resource type="PackedScene" uid="uid://dvpif6w35r6do" path="res://Assets/doorknob/scene.gltf" id="1_yocp1"]
+[ext_resource type="Script" uid="uid://cilt7j2kqoxk" path="res://Scenes/Props/doorknob.gd" id="2_65yec"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_65yec"]
+size = Vector3(3, 1, 1)
+
+[node name="DoorKnob" type="Node3D" unique_id=30317572]
+
+[node name="Sketchfab_Scene" parent="." unique_id=2146319474 instance=ExtResource("1_yocp1")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Sketchfab_Scene" unique_id=1587588360]
+script = ExtResource("2_65yec")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_Scene/StaticBody3D" unique_id=1178614331]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5343629, 0, 0)
+shape = SubResource("BoxShape3D_65yec")

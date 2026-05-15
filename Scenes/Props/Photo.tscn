@@ -1,0 +1,8 @@
+[gd_scene load_steps=0 format=3 uid="uid://b5jabct82beu5"]
+
+[ext_resource type="PackedScene" uid="uid://dii8w2gc6udss" path="res://Assets/photo/scene.gltf" id="1_poivw"]
+
+[node name="Photo" type="Node3D" unique_id=1118786426]
+
+[node name="Sketchfab_Scene" parent="." unique_id=51244860 instance=ExtResource("1_poivw")]
+transform = Transform3D(0.00071348285, 0, 0.0007006727, 0.0005872402, 0.00054550235, -0.00059797656, -0.0003822186, 0.0008381092, 0.00038920657, 0, 0, -0.01601452)

@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://btbf7b5uaojqq"]
+
+[ext_resource type="PackedScene" uid="uid://dt2dlapkgov0a" path="res://Scenes/Environments/garden/garden.tscn" id="1_gwcpk"]
+[ext_resource type="PackedScene" uid="uid://djso8yqaiwdet" path="res://Scenes/Characters/OldLady/OldLady.tscn" id="2_455xj"]
+[ext_resource type="PackedScene" uid="uid://cmiwqfdxtrcb6" path="res://Scenes/Characters/GardenGirl/childstatic.tscn" id="3_455xj"]
+[ext_resource type="PackedScene" uid="uid://cmw33lk1nk28f" path="res://Scenes/Props/sprinkler.tscn" id="4_3v6bu"]
+[ext_resource type="PackedScene" uid="uid://bmnexblix7hyh" path="res://Scenes/Props/heldFlowerpot.tscn" id="5_gq31d"]
+[ext_resource type="AudioStream" uid="uid://npliw4wiqg5d" path="res://Assets/Music/music2.mp3" id="6_mdejb"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_gwcpk"]
+sky_energy_multiplier = 1.3
+
+[sub_resource type="Sky" id="Sky_455xj"]
+sky_material = SubResource("ProceduralSkyMaterial_gwcpk")
+
+[sub_resource type="Environment" id="Environment_3v6bu"]
+background_mode = 2
+sky = SubResource("Sky_455xj")
+
+[node name="Memory2" type="WorldEnvironment" unique_id=1905456073]
+environment = SubResource("Environment_3v6bu")
+
+[node name="Garden" parent="." unique_id=867781434 instance=ExtResource("1_gwcpk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.36206055, -0.52561295, -0.21515173)
+
+[node name="OldLady" parent="." unique_id=2063383152 instance=ExtResource("2_455xj")]
+transform = Transform3D(-0.8062023, 0, -0.7483568, 0, 1.1, 0, 0.7483568, 0, -0.8062023, 0, 0.25042874, -7.4224963)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=224717820]
+transform = Transform3D(0.52174973, 0.14104442, 0.84135824, -0.84070915, 0.25248063, 0.4790216, -0.14486334, -0.957267, 0.250309, 16.76286, 5.733829, 0)
+
+[node name="DialogueUI" type="CanvasLayer" parent="." unique_id=1108246107]
+
+[node name="Label" type="Label" parent="DialogueUI" unique_id=1396635347]
+offset_left = 347.0
+offset_top = 589.0
+offset_right = 387.0
+offset_bottom = 612.0
+horizontal_alignment = 1
+
+[node name="Childstatic" parent="." unique_id=62355808 node_paths=PackedStringArray("dialogue_label") instance=ExtResource("3_455xj")]
+transform = Transform3D(0.67610496, 0, 0.4276471, 0, 0.8, 0, -0.4276471, 0, 0.67610496, -2.6586332, 0.32445204, -8.025248)
+dialogue_label = NodePath("../DialogueUI/Label")
+
+[node name="Sprinkler" parent="." unique_id=1729772080 node_paths=PackedStringArray("dialogue_label") instance=ExtResource("4_3v6bu")]
+transform = Transform3D(-0.32718366, 0, -0.6188302, 0, 0.7, 0, 0.6188302, 0, -0.32718366, 5.390546, 0.04371807, -0.2553215)
+dialogue_label = NodePath("../DialogueUI/Label")
+
+[node name="Flowerpot" parent="." unique_id=1345148551 instance=ExtResource("5_gq31d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4265993, 0.3134389, -7.191417)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=436915267]
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=1968154594]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -73.0
+offset_right = 73.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 0.78431374, 0.19607843, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 22
+text = "Playing Memories.."
+horizontal_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1065325699]
+stream = ExtResource("6_mdejb")

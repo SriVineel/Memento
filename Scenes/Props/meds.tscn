@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://bjyuixjkjwk75"]
+
+[ext_resource type="Script" uid="uid://dtu4bqdavqre6" path="res://Scenes/Props/meds.gd" id="1_seygq"]
+[ext_resource type="PackedScene" uid="uid://dogm8og8xcxo5" path="res://Assets/meds/scene.gltf" id="1_uhcda"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_uhcda"]
+size = Vector3(0.13049316, 0.20822144, 0.12054443)
+
+[node name="Meds" type="StaticBody3D"]
+script = ExtResource("1_seygq")
+memory_scene_path = "uid://hxsxvf6hu36w"
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("1_uhcda")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0065307617, 0.0488739, -0.0008239746)
+shape = SubResource("BoxShape3D_uhcda")

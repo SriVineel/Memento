@@ -18,3 +18,7 @@ mono_crash.*.json
 # OS generated files
 .DS_Store
 Thumbs.db
+
+*.zip
+*.exe
+*.pck

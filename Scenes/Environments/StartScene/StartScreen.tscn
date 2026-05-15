@@ -1,0 +1,91 @@
+[gd_scene format=3 uid="uid://b3h6fy3j0w875"]
+
+[ext_resource type="Script" uid="uid://dng6evu8bejxl" path="res://Scenes/Environments/StartScene/start_screen.gd" id="1_8q4rf"]
+
+[node name="StartScreen" type="Control" unique_id=607036622]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8q4rf")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=269082605]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="ContextPanel" type="Control" parent="." unique_id=359003156]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="ContextPanel" unique_id=955969795]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ContextPanel/CenterContainer" unique_id=1780134077]
+custom_minimum_size = Vector2(0, 400)
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ContextPanel/CenterContainer/VBoxContainer" unique_id=182497939]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+bbcode_enabled = true
+text = "[center]She has lived in this house for decades. Today, her daughter is coming to visit.
+
+But as she moves through the rooms, the past begins to surface. Fragments. Faces. Feelings she can no longer hold on to.
+
+[i]Walk through it with her.[/i][/center]
+"
+fit_content = true
+
+[node name="TitlePanel" type="CenterContainer" parent="." unique_id=1239518318]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TitlePanel" unique_id=2057407143]
+custom_minimum_size = Vector2(0, 400)
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="TitlePanel/VBoxContainer" unique_id=885595470]
+layout_mode = 2
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 72
+text = "Memento"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="TitlePanel/VBoxContainer" unique_id=1536787511]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4733242, 0.4733242, 0.4733242, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 28
+text = "The Game of Memories"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ClickHint" type="Label" parent="TitlePanel/VBoxContainer" unique_id=829344133]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5882353, 0.5882353, 0.5882353, 1)
+text = "Click to Continue"
+horizontal_alignment = 1
+vertical_alignment = 1

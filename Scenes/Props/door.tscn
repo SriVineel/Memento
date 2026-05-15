@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://cm0rq2jkd2cxl"]
+
+[ext_resource type="Script" uid="uid://bpuixlwuwoseh" path="res://Scenes/Props/door.gd" id="1_sc646"]
+[ext_resource type="PackedScene" uid="uid://benbvgd7lut6o" path="res://Assets/door/scene.gltf" id="1_th5xv"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sc646"]
+size = Vector3(0.43112183, 2.3181152, 1.1069031)
+
+[node name="Door" type="StaticBody3D"]
+script = ExtResource("1_sc646")
+next_scene_path = "uid://bjgyaxhkj6h1s"
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("1_th5xv")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.007736206, 0.06555176, -0.000289917)
+shape = SubResource("BoxShape3D_sc646")

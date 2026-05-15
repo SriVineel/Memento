@@ -1,0 +1,11 @@
+Model Information:
+* title:	Streamers
+* source:	https://sketchfab.com/3d-models/streamers-ade79c17a4c24db5ac2393185120e738
+* author:	LeeVai (https://sketchfab.com/leevai42)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Streamers" (https://sketchfab.com/3d-models/streamers-ade79c17a4c24db5ac2393185120e738) by LeeVai (https://sketchfab.com/leevai42) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

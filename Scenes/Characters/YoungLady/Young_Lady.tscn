@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://cj5m8ayvy36sn"]
+
+[ext_resource type="Script" uid="uid://2pxvgqu7kfla" path="res://Scenes/Characters/OldLady/old_lady_controller.gd" id="1_cxt0x"]
+[ext_resource type="PackedScene" uid="uid://bu86lp8bu41gx" path="res://Assets/TeenGirl/scene.gltf" id="2_7vvmi"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_c3562"]
+radius = 0.1538086
+height = 1.0078125
+
+[node name="OldLady" type="CharacterBody3D" unique_id=650622921]
+transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 0, 0, 0)
+script = ExtResource("1_cxt0x")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2039460110]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=591747615]
+cast_shadow = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=525463605]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.49609375, 0)
+shape = SubResource("CapsuleShape3D_c3562")
+
+[node name="Young_lady" parent="." unique_id=54422552 instance=ExtResource("2_7vvmi")]
+transform = Transform3D(0.625, 0, 0, 0, 0.625, 0, 0, 0, 0.625, 0, 0, 0)
+
+[node name="Head" type="Node3D" parent="." unique_id=1439573362]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9968043, 0.041871395)
+
+[node name="Camera3D" type="Camera3D" parent="Head" unique_id=571411273]
+transform = Transform3D(-0.90517634, 0, 0.084273525, 0, 0.9090909, 0, -0.084273525, 0, -0.90517634, 0, 0.0049259067, 0.05726741)
+
+[node name="RayCast3D" type="RayCast3D" parent="Head/Camera3D" unique_id=2136627196]
+target_position = Vector3(0, 0, -2)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=144184282]
+
+[node name="InteractPrompt" type="Label" parent="CanvasLayer" unique_id=1510307956]
+offset_left = 470.0
+offset_top = 151.0
+offset_right = 611.0
+offset_bottom = 174.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+text = "Press E to Interact"

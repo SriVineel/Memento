@@ -1,0 +1,11 @@
+Model Information:
+* title:	doorknob
+* source:	https://sketchfab.com/3d-models/doorknob-ea815ef83dc4462d8b90c4b153e51ae8
+* author:	testuser055 (https://sketchfab.com/josieduck2)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "doorknob" (https://sketchfab.com/3d-models/doorknob-ea815ef83dc4462d8b90c4b153e51ae8) by testuser055 (https://sketchfab.com/josieduck2) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

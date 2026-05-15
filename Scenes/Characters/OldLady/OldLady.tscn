@@ -1,7 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://djso8yqaiwdet"]
+[gd_scene load_steps=7 format=3 uid="uid://djso8yqaiwdet"]
 
 [ext_resource type="PackedScene" uid="uid://5fg6vruvh31j" path="res://Assets/OldWoman2/scene.gltf" id="1_c3562"]
 [ext_resource type="Script" uid="uid://2pxvgqu7kfla" path="res://Scenes/Characters/OldLady/old_lady_controller.gd" id="1_qd1sg"]
+[ext_resource type="PackedScene" uid="uid://bmnexblix7hyh" path="res://Scenes/Props/heldFlowerpot.tscn" id="3_olibn"]
+[ext_resource type="PackedScene" uid="uid://snr4k4epue27" path="res://Scenes/Props/heldSprinkler.tscn" id="4_408cj"]
+[ext_resource type="Script" uid="uid://b17pywmprdvtj" path="res://Scenes/Characters/OldLady/objectives.gd" id="5_58h7a"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_c3562"]
 radius = 0.1538086
@@ -28,3 +31,44 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9968043, 0.041871395)
 
 [node name="Camera3D" type="Camera3D" parent="Head"]
 transform = Transform3D(-0.90517634, 0, 0.084273525, 0, 0.9090909, 0, -0.084273525, 0, -0.90517634, 0, 0.0049259067, 0.05726741)
+
+[node name="RayCast3D" type="RayCast3D" parent="Head/Camera3D"]
+target_position = Vector3(0, 0, -2)
+
+[node name="Flowerpot2" parent="Head/Camera3D" instance=ExtResource("3_olibn")]
+transform = Transform3D(0.4999998, 0, 1.8626451e-08, 0, 0.5, 0, -1.8626451e-08, 0, 0.4999998, -0.019041615, -0.5556308, -0.20452467)
+visible = false
+
+[node name="Sprinkler" parent="Head/Camera3D" instance=ExtResource("4_408cj")]
+transform = Transform3D(-0.23426586, 0.008633557, -0.44163874, -0.077957414, 0.4912496, 0.050955623, 0.43478954, 0.092732385, -0.22881974, -0.029292334, -0.1742425, -0.31462696)
+visible = false
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="InteractPrompt" type="Label" parent="CanvasLayer"]
+offset_left = 470.0
+offset_top = 151.0
+offset_right = 611.0
+offset_bottom = 174.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+text = "Press E to Interact"
+
+[node name="ObjectivesPanel" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(280, 120)
+offset_left = 490.0
+offset_top = 171.0
+offset_right = 770.0
+offset_bottom = 291.0
+script = ExtResource("5_58h7a")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ObjectivesPanel"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="OBJECTIVES" type="Label" parent="ObjectivesPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.78431374, 0.3137255, 1)
+theme_override_font_sizes/font_size = 14
+
+[node name="ObjectivesList" type="VBoxContainer" parent="ObjectivesPanel/VBoxContainer"]
+layout_mode = 2

@@ -1,0 +1,11 @@
+Model Information:
+* title:	Wrinkled Fabric Cloth
+* source:	https://sketchfab.com/3d-models/wrinkled-fabric-cloth-6451c1d3d09c4216be9b1b009c8db63b
+* author:	lucapianta (https://sketchfab.com/lucapianta)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Wrinkled Fabric Cloth" (https://sketchfab.com/3d-models/wrinkled-fabric-cloth-6451c1d3d09c4216be9b1b009c8db63b) by lucapianta (https://sketchfab.com/lucapianta) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

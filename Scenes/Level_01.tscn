@@ -1,14 +1,36 @@
-[gd_scene load_steps=3 format=3 uid="uid://bjgyaxhkj6h1s"]
+[gd_scene format=3 uid="uid://bjgyaxhkj6h1s"]
 
 [ext_resource type="PackedScene" uid="uid://yo88dubd42ds" path="res://Scenes/Environments/House/House.tscn" id="1_7noh3"]
+[ext_resource type="Script" uid="uid://ciw3ux4wny0pi" path="res://Scenes/level_01.gd" id="1_e0dve"]
 [ext_resource type="PackedScene" uid="uid://djso8yqaiwdet" path="res://Scenes/Characters/OldLady/OldLady.tscn" id="2_in6ly"]
+[ext_resource type="PackedScene" uid="uid://c26exgh63jy28" path="res://Scenes/Interactables/PlacementSpot.tscn" id="3_in6ly"]
 
-[node name="Level01" type="Node3D"]
+[sub_resource type="Environment" id="Environment_egvei"]
+adjustment_enabled = true
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+[node name="Level01" type="Node3D" unique_id=346689540]
+script = ExtResource("1_e0dve")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1991311616]
 transform = Transform3D(-0.998894, 0, -0.04701922, -0.008189045, 0.9847167, 0.17397116, 0.04630061, 0.17416379, -0.9836276, 0, 3.7419543, -8.630421)
 
-[node name="House" parent="." instance=ExtResource("1_7noh3")]
+[node name="House" parent="." unique_id=19143090 instance=ExtResource("1_7noh3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25413346, -1.9187608, -1.3844895)
 
-[node name="OldLady" parent="." instance=ExtResource("2_in6ly")]
-transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 1.4520614, 0.12923706, -1.7203879)
+[node name="OldLady" parent="." unique_id=1695944181 instance=ExtResource("2_in6ly")]
+transform = Transform3D(0.22028291, 0, 1.0777177, 0, 1.1, 0, -1.0777177, 0, 0.22028291, -3.4951854, -1.8194864, -2.5371923)
+
+[node name="Spawn_FromRooftop" type="Marker3D" parent="." unique_id=1459884480]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0481946, 0.977723, 0.8585944)
+
+[node name="SpawnFromLivingRoom" type="Marker3D" parent="." unique_id=1873294315]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1240168, 0.977723, 0.6626768)
+
+[node name="PlacementSpot" parent="." unique_id=200387736 instance=ExtResource("3_in6ly")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2581706, -1.7101431, -4.2060995)
+
+[node name="Spawn_AfterMedicine" type="Marker3D" parent="." unique_id=1279835334]
+transform = Transform3D(-0.98644644, 0, 0.16408359, 0, 1, 0, -0.16408359, 0, -0.98644644, -3.4670165, -1.9062921, -2.167513)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2147428221]
+environment = SubResource("Environment_egvei")

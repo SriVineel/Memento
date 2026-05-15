@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://dc8yfujx5ifna"]
+
+[ext_resource type="Script" uid="uid://i5tnokb8r35t" path="res://Scenes/Memories/memory_1.gd" id="1_m6wmx"]
+[ext_resource type="PackedScene" uid="uid://ojfrudqwx5y0" path="res://Scenes/Environments/Hallway/Hallway.tscn" id="2_tl064"]
+[ext_resource type="PackedScene" uid="uid://cj5m8ayvy36sn" path="res://Scenes/Characters/YoungLady/Young_Lady.tscn" id="3_yjc5s"]
+
+[node name="Memory1" type="Node" unique_id=818300936]
+script = ExtResource("1_m6wmx")
+
+[node name="Hallway" parent="." unique_id=1208809487 instance=ExtResource("2_tl064")]
+
+[node name="OldLady" parent="." unique_id=713464902 instance=ExtResource("3_yjc5s")]
+transform = Transform3D(-0.0007636119, 0, 1.7499998, 0, 1.75, 0, -1.7499998, 0, -0.0007636119, -5.0530043, 0, 2.9961119)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=2118605771]
+transform = Transform3D(1, 0, 0, 0, 0.08819886, 0.99610287, 0, -0.99610287, 0.08819886, 1.3298299, 12.636939, 6.988446)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=348304604]
+
+[node name="MemoryLabel" type="Label" parent="CanvasLayer" unique_id=58062013]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -73.0
+offset_right = 73.0
+offset_bottom = 49.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 0.78431374, 0.19607843, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 22
+text = "Playing Memories..
+"
+horizontal_alignment = 1

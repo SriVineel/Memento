@@ -1,0 +1,172 @@
+[gd_scene load_steps=23 format=3 uid="uid://de73s6a4yw1e1"]
+
+[ext_resource type="PackedScene" uid="uid://cgwopapp66kgx" path="res://Assets/livingroom/scene.gltf" id="1_h2t4u"]
+[ext_resource type="PackedScene" uid="uid://djso8yqaiwdet" path="res://Scenes/Characters/OldLady/OldLady.tscn" id="2_in2ku"]
+[ext_resource type="PackedScene" uid="uid://k2qudbb3l2gh" path="res://Assets/Wall/scene.gltf" id="3_6tsx2"]
+[ext_resource type="PackedScene" uid="uid://benbvgd7lut6o" path="res://Assets/door/scene.gltf" id="4_7560e"]
+[ext_resource type="PackedScene" uid="uid://b6ebw6pbq3cv5" path="res://Assets/photo_frame/scene.gltf" id="5_y3kut"]
+[ext_resource type="PackedScene" uid="uid://b5jabct82beu5" path="res://Scenes/Props/Photo.tscn" id="6_y3kut"]
+[ext_resource type="Script" uid="uid://b6dcm8innglvh" path="res://Scenes/Environments/LivingRoom/Photo.gd" id="7_ox8qo"]
+[ext_resource type="PackedScene" uid="uid://d5vuxr2di7vq" path="res://Assets/wrinkled_fabric_cloth/scene.gltf" id="8_1n6oc"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_manl4"]
+size = Vector3(5.7458496, 2.30719, 0.28851318)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_k3m0e"]
+size = Vector3(0.22509766, 2.456482, 4.4281006)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pcrwe"]
+size = Vector3(6.0839233, 2.0996094, 0.048339844)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1r8us"]
+size = Vector3(0.9633789, 0.66503906, 2.06781)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_manl4"]
+height = 0.4295292
+radius = 0.2788086
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_k3m0e"]
+height = 1.5515137
+radius = 0.35302734
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1x7q1"]
+size = Vector3(2.046936, 0.8394165, 1.1137695)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tbvry"]
+size = Vector3(0.45654297, 1.7518921, 0.46313477)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2o202"]
+size = Vector3(1.697876, 0.44799805, 0.97802734)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_pcrwe"]
+height = 0.52752686
+radius = 0.30908203
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ap232"]
+size = Vector3(1.7101746, 0.08187866, 0.7705078)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_in2ku"]
+size = Vector3(20, 0.1, 20)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7560e"]
+size = Vector3(10, 3, 0.2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_y3kut"]
+size = Vector3(0.049703367, 0.05714111, 0.011091309)
+
+[node name="LivingRoom" type="Node2D"]
+
+[node name="livingroom" parent="." instance=ExtResource("1_h2t4u")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="livingroom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.412737, 0, -2.319438)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="livingroom/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13342285, 0.2996521, -0.08774185)
+shape = SubResource("BoxShape3D_manl4")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="livingroom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.57544816, 0, -0.65978336)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="livingroom/StaticBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.014404297, 0.22964478, 0.6893921)
+shape = SubResource("BoxShape3D_k3m0e")
+
+[node name="StaticBody3D3" type="StaticBody3D" parent="livingroom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.613147, 0, 2.373566)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="livingroom/StaticBody3D3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.07028198, 0.5498047, -0.12036133)
+shape = SubResource("BoxShape3D_pcrwe")
+
+[node name="StaticBody3D4" type="StaticBody3D" parent="livingroom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.11900872, -0.820598, 0.0258044)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="livingroom/StaticBody3D4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.018310547, 0.16748047, -0.008026123)
+shape = SubResource("BoxShape3D_1r8us")
+
+[node name="StaticBody3D5" type="StaticBody3D" parent="livingroom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.054104626, -0.74407256, -1.54249)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="livingroom/StaticBody3D5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.05434218, -0.009121299, 0.07996321)
+shape = SubResource("CylinderShape3D_manl4")
+
+[node name="StaticBody3D6" type="StaticBody3D" parent="livingroom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3520264, 0, -2.1565754)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="livingroom/StaticBody3D6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2557373, 0)
+shape = SubResource("CylinderShape3D_k3m0e")
+
+[node name="StaticBody3D7" type="StaticBody3D" parent="livingroom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8349915, -0.8519908, 1.835586)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="livingroom/StaticBody3D7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.12991333, 0.12924194, -0.056884766)
+shape = SubResource("BoxShape3D_1x7q1")
+
+[node name="StaticBody3D8" type="StaticBody3D" parent="livingroom"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="livingroom/StaticBody3D8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.005592227, -0.4024353, 1.819851)
+shape = SubResource("BoxShape3D_tbvry")
+
+[node name="StaticBody3D9" type="StaticBody3D" parent="livingroom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5765615, -0.8542295, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="livingroom/StaticBody3D9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08026123, 0.045043945, 0.010986328)
+shape = SubResource("BoxShape3D_2o202")
+
+[node name="StaticBody3D11" type="StaticBody3D" parent="livingroom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.1823826, -0.6640246, 1.7060595)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="livingroom/StaticBody3D11"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.11401415, -0.15127563, -0.028410554)
+shape = SubResource("CylinderShape3D_pcrwe")
+
+[node name="StaticBody3D10" type="StaticBody3D" parent="livingroom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4298146, -0.39144704, -2.3193085)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="livingroom/StaticBody3D10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.24330139, 0.12540779, -0.114746094)
+shape = SubResource("BoxShape3D_ap232")
+
+[node name="OldLady" parent="." instance=ExtResource("2_in2ku")]
+transform = Transform3D(-4.8082526e-08, 0, 1.1, 0, 1.1, 0, -1.1, 0, -4.8082526e-08, -4.6302853, -0.9636528, 0)
+
+[node name="Floor" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.15, 0)
+shape = SubResource("BoxShape3D_in2ku")
+
+[node name="Wall" parent="." instance=ExtResource("3_6tsx2")]
+transform = Transform3D(-2.3167035e-08, 0, 0.4, 0, 0.32, 0, -0.53, 0, -1.7484556e-08, -5.222805, 0.19737756, -0.029452205)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Wall"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wall/StaticBody3D"]
+transform = Transform3D(1, 0, 3.5527137e-14, 0, 1, 0, 0, 0, 1, -2.0116568e-07, -0.45991555, 0.16267014)
+shape = SubResource("BoxShape3D_7560e")
+
+[node name="Door" parent="." instance=ExtResource("4_7560e")]
+transform = Transform3D(-4.371139e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.371139e-09, -5.287517, -0.89690053, -4.2461486)
+
+[node name="PhotoFrame" parent="." instance=ExtResource("5_y3kut")]
+transform = Transform3D(-0.049194247, 0, -0.008940117, 0, 0.049999997, 0, 0.008940117, 0, -0.049194247, -0.89507294, -0.65824443, 6.716074)
+
+[node name="Photo" parent="." instance=ExtResource("6_y3kut")]
+transform = Transform3D(5.8904166, 0.78862244, -6.8771067, -0.73127186, 5.937885, 3.7892663, 0.87647504, -0.34582654, 49.379612, -2.1756184, -0.5290934, -0.01587329)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Photo"]
+script = ExtResource("7_ox8qo")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Photo/StaticBody3D"]
+transform = Transform3D(1.4999999, -1.414679e-06, -8.34465e-07, -3.4458935e-08, 1.4999937, -5.2452087e-06, 1.527369e-07, 3.259629e-08, 1.5, 0.012108982, -0.00023962557, -0.0027672849)
+shape = SubResource("BoxShape3D_y3kut")
+
+[node name="cloth" parent="." instance=ExtResource("8_1n6oc")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -2.3313904, -0.56748384, -0.31394514)

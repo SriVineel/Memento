@@ -1,0 +1,232 @@
+[gd_scene format=3 uid="uid://saip0k3y26i8"]
+
+[ext_resource type="Script" uid="uid://c8kt7wshihlk6" path="res://Scenes/Memories/Memory_0.gd" id="1_6xn5h"]
+[ext_resource type="PackedScene" uid="uid://chwsofxubrch2" path="res://Assets/bench/scene.gltf" id="4_ayial"]
+[ext_resource type="PackedScene" uid="uid://chr5an4vf130f" path="res://Assets/TeddyBear/scene.gltf" id="5_2ddfi"]
+[ext_resource type="PackedScene" uid="uid://c8ncksox3h0d6" path="res://Scenes/Characters/Boy/Boy.tscn" id="5_7l3pb"]
+[ext_resource type="Script" uid="uid://bc7yfp5s08aa4" path="res://Scenes/Memories/dialouge_box.gd" id="5_f88gt"]
+[ext_resource type="PackedScene" uid="uid://duforibqxy41u" path="res://Scenes/Characters/Girl/girl_swing.tscn" id="5_ixtt6"]
+[ext_resource type="PackedScene" uid="uid://ct723bssv7cwi" path="res://Scenes/Props/Tree.tscn" id="6_ixtt6"]
+[ext_resource type="PackedScene" uid="uid://bqspj3fe1fus5" path="res://Scenes/Props/grass.tscn" id="7_0wyb8"]
+[ext_resource type="AudioStream" uid="uid://dme8an7k84bd4" path="res://Assets/Music/music4.mp3" id="8_0wyb8"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_w40hf"]
+sky_top_color = Color(0.7058824, 0.627451, 0.8627451, 1)
+sky_horizon_color = Color(1, 0.8235294, 0.7058824, 1)
+ground_bottom_color = Color(0.78431374, 0.7254902, 0.6666667, 1)
+
+[sub_resource type="Sky" id="Sky_ayial"]
+sky_material = SubResource("ProceduralSkyMaterial_w40hf")
+
+[sub_resource type="Environment" id="Environment_f88gt"]
+background_mode = 2
+sky = SubResource("Sky_ayial")
+ambient_light_source = 3
+ambient_light_energy = 0.8
+fog_enabled = true
+fog_light_color = Color(0.9411765, 0.92156863, 1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f88gt"]
+albedo_color = Color(0.33333334, 0.54901963, 0.15686275, 1)
+uv1_scale = Vector3(10, 10, 10)
+
+[node name="Memory0" type="Node" unique_id=1664206027]
+script = ExtResource("1_6xn5h")
+
+[node name="World" type="Node3D" parent="." unique_id=294325875]
+
+[node name="Bench" parent="World" unique_id=1098387675 instance=ExtResource("4_ayial")]
+transform = Transform3D(10.552074, 0, -3.1070442, 0, 11, 0, 3.1070442, 0, 10.552074, 1.9994538, 0.28651357, -0.0947063)
+
+[node name="Teddy" parent="World" unique_id=1928438361 instance=ExtResource("5_2ddfi")]
+transform = Transform3D(0.00090884353, 0, -0.00041713766, 0, 0.0010000002, 0, 0.00041713766, 0, 0.00090884353, 1.9477938, 0.6318033, 0.45792246)
+
+[node name="Camera3D" type="Camera3D" parent="World" unique_id=716023634]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3606305, 1, 3)
+current = true
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="World" unique_id=505763190]
+transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 0, 0, 0)
+light_energy = 1.5
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="World" unique_id=1697207391]
+environment = SubResource("Environment_f88gt")
+
+[node name="Ground" type="CSGBox3D" parent="World" unique_id=335467380]
+size = Vector3(50, 0.1, 50)
+material = SubResource("StandardMaterial3D_f88gt")
+
+[node name="Boy_Sitting" parent="World" unique_id=910205183 instance=ExtResource("5_7l3pb")]
+transform = Transform3D(0.2782871, 0, 0.960498, 0, 1, 0, -0.960498, 0, 0.2782871, 0, 0, 0)
+
+[node name="girl_swing" parent="World" unique_id=439630776 instance=ExtResource("5_ixtt6")]
+transform = Transform3D(-0.021772057, -0.050244603, -0.89833254, 0.008537043, 0.89854354, -0.05046331, 0.89969605, -0.009741991, -0.021260202, 1.9028649, -0.013130188, -0.15388852)
+
+[node name="Tree" parent="World" unique_id=1535444011 instance=ExtResource("6_ixtt6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.4470503, 0, -3.2234142)
+
+[node name="Tree2" parent="World" unique_id=641722286 instance=ExtResource("6_ixtt6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5848372, 0, -4.860734)
+
+[node name="Tree3" parent="World" unique_id=693827527 instance=ExtResource("6_ixtt6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.429842, 0, 1.3182194)
+
+[node name="Tree4" parent="World" unique_id=1968180369 instance=ExtResource("6_ixtt6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8080418, 0, -3.2234142)
+
+[node name="Tree5" parent="World" unique_id=1449677527 instance=ExtResource("6_ixtt6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.532331, 0, -8.107433)
+
+[node name="Tree6" parent="World" unique_id=1766105307 instance=ExtResource("6_ixtt6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5004435, 0, -9.744753)
+
+[node name="Tree7" parent="World" unique_id=186348948 instance=ExtResource("6_ixtt6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.515123, 0, -3.5657995)
+
+[node name="Tree8" parent="World" unique_id=1639148648 instance=ExtResource("6_ixtt6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.277239, 0, -8.107433)
+
+[node name="Tree9" parent="World" unique_id=2143459248 instance=ExtResource("6_ixtt6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.550469, 0, -13.0953665)
+
+[node name="Tree10" parent="World" unique_id=1240496098 instance=ExtResource("6_ixtt6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.582357, 0, -14.732686)
+
+[node name="Tree11" parent="World" unique_id=2110429028 instance=ExtResource("6_ixtt6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5676773, 0, -8.553733)
+
+[node name="Tree12" parent="World" unique_id=1797934327 instance=ExtResource("6_ixtt6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.805561, 0, -13.0953665)
+
+[node name="Tree13" parent="World" unique_id=16311141 instance=ExtResource("6_ixtt6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1926833, 0, 1.055145)
+
+[node name="Tree14" parent="World" unique_id=996765771 instance=ExtResource("6_ixtt6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.224571, 0, -0.58217454)
+
+[node name="Tree15" parent="World" unique_id=836035169 instance=ExtResource("6_ixtt6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7901083, 0, 5.596779)
+
+[node name="Tree16" parent="World" unique_id=1513211414 instance=ExtResource("6_ixtt6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.4477754, 0, 1.055145)
+
+[node name="Tree17" parent="World" unique_id=105805957 instance=ExtResource("6_ixtt6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.543824, 0, 2.6587338)
+
+[node name="Tree18" parent="World" unique_id=666205843 instance=ExtResource("6_ixtt6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1079116, 0, 1.055145)
+
+[node name="Grass" parent="World" unique_id=563458524 instance=ExtResource("7_0wyb8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.49091256, 0, 0)
+
+[node name="Grass2" parent="World" unique_id=110005763 instance=ExtResource("7_0wyb8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2915726, 0.0016634464, 0)
+
+[node name="Grass3" parent="World" unique_id=2143957526 instance=ExtResource("7_0wyb8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0685573, 0, 2.3432198)
+
+[node name="Grass4" parent="World" unique_id=732275179 instance=ExtResource("7_0wyb8")]
+transform = Transform3D(-0.9995071, 0, -0.03139329, 0, 1, 0, 0.03139329, 0, -0.9995071, 2.0794573, 0, -2.342272)
+
+[node name="Grass5" parent="World" unique_id=1595251888 instance=ExtResource("7_0wyb8")]
+transform = Transform3D(-0.9995071, 0, -0.03139329, 0, 1, 0, 0.03139329, 0, -0.9995071, -0.71982247, 0.0016634464, -2.2543502)
+
+[node name="Grass6" parent="World" unique_id=1101561140 instance=ExtResource("7_0wyb8")]
+transform = Transform3D(-0.9995071, 0, -0.03139329, 0, 1, 0, 0.03139329, 0, -0.9995071, 0.42902872, 0, -4.6348095)
+
+[node name="Grass7" parent="World" unique_id=1560487966 instance=ExtResource("7_0wyb8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.6269593, 0, -7.45634)
+
+[node name="Grass8" parent="World" unique_id=1145298031 instance=ExtResource("7_0wyb8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8262992, 0.0016634464, -7.45634)
+
+[node name="Grass9" parent="World" unique_id=897991007 instance=ExtResource("7_0wyb8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.0493145, 0, -5.11312)
+
+[node name="Grass10" parent="World" unique_id=726962304 instance=ExtResource("7_0wyb8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1258168, 0, -4.9803114)
+
+[node name="Grass11" parent="World" unique_id=714166458 instance=ExtResource("7_0wyb8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.926477, 0.0016634464, -4.9803114)
+
+[node name="Grass12" parent="World" unique_id=1721665455 instance=ExtResource("7_0wyb8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.7034616, 0, -2.6370916)
+
+[node name="Grass13" parent="World" unique_id=1514623523 instance=ExtResource("7_0wyb8")]
+transform = Transform3D(0.59008443, 0, 0.8073415, 0, 1, 0, -0.8073415, 0, 0.59008443, -4.0808105, -0.009328485, 2.0185356)
+
+[node name="Grass14" parent="World" unique_id=1175157789 instance=ExtResource("7_0wyb8")]
+transform = Transform3D(0.59008443, 0, 0.8073415, 0, 1, 0, -0.8073415, 0, 0.59008443, -2.4281845, -0.007665038, -0.24255353)
+
+[node name="Grass15" parent="World" unique_id=1970592940 instance=ExtResource("7_0wyb8")]
+transform = Transform3D(0.59008443, 0, 0.8073415, 0, 1, 0, -0.8073415, 0, 0.59008443, -1.2580882, -0.009328485, 2.1275349)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1759267518]
+stream = ExtResource("8_0wyb8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=669167738]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1537709101]
+
+[node name="FadeOverlay" type="ColorRect" parent="CanvasLayer" unique_id=2041424351]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="NarrationLabel" type="RichTextLabel" parent="CanvasLayer" unique_id=1156782658]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+vertical_alignment = 2
+
+[node name="DialougePanel" type="PanelContainer" parent="CanvasLayer" unique_id=1625206077]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -77.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/DialougePanel" unique_id=448070368]
+layout_mode = 2
+
+[node name="SpeakerLabel" type="Label" parent="CanvasLayer/DialougePanel/VBoxContainer" unique_id=1544357803]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.78431374, 0.3137255, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 20
+
+[node name="TextLabel" type="Label" parent="CanvasLayer/DialougePanel/VBoxContainer" unique_id=139265853]
+layout_mode = 2
+
+[node name="ContinueHint" type="Label" parent="CanvasLayer/DialougePanel/VBoxContainer" unique_id=465961032]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.7058824, 0.7058824, 0.7058824, 1)
+theme_override_font_sizes/font_size = 12
+text = "▶ Press Space to continue"
+
+[node name="DialougeBox" type="Node" parent="CanvasLayer" unique_id=2054330090]
+script = ExtResource("5_f88gt")
+
+[node name="MemoryLabel" type="Label" parent="CanvasLayer" unique_id=594163055]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -69.0
+offset_right = 69.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 0.78431374, 0.19607843, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 22
+text = "Playing Memories"
+horizontal_alignment = 1

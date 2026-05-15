@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://c26exgh63jy28"]
+
+[ext_resource type="Script" uid="uid://2pwr20i7ugys" path="res://Scenes/Interactables/placement_spot.gd" id="1_lcj4o"]
+[ext_resource type="PackedScene" uid="uid://bmnexblix7hyh" path="res://Scenes/Props/heldFlowerpot.tscn" id="2_7ya4q"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_aikiv"]
+size = Vector3(1.487854, 1, 1.5111694)
+
+[node name="PlacementSpot" type="StaticBody3D"]
+script = ExtResource("1_lcj4o")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0.0975708, 0, 0.027404785)
+shape = SubResource("BoxShape3D_aikiv")
+
+[node name="Flowerpot" parent="." instance=ExtResource("2_7ya4q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.083534464, 0, 0)
+visible = false

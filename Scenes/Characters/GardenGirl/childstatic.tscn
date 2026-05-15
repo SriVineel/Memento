@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://cmiwqfdxtrcb6"]
+
+[ext_resource type="Script" uid="uid://dyg4i3yfhnjk1" path="res://Scenes/Characters/GardenGirl/childstatic.gd" id="1_3cpua"]
+[ext_resource type="PackedScene" uid="uid://cpr3uiyd2xngp" path="res://Scenes/Characters/GardenGirl/child.tscn" id="1_7175d"]
+[ext_resource type="PackedScene" uid="uid://st802qkm8d4q" path="res://Scenes/Characters/GardenGirl/joyful.tscn" id="3_deyce"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_3cpua"]
+radius = 0.23291016
+height = 1.8686523
+
+[node name="Childstatic" type="StaticBody3D" node_paths=PackedStringArray("confused_model", "joy_model")]
+script = ExtResource("1_3cpua")
+confused_model = NodePath("child")
+joy_model = NodePath("joyful")
+
+[node name="child" parent="." instance=ExtResource("1_7175d")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.67700195, 0)
+shape = SubResource("CapsuleShape3D_3cpua")
+
+[node name="joyful" parent="." instance=ExtResource("3_deyce")]
+visible = false

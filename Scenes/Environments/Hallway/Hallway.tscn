@@ -1,0 +1,101 @@
+[gd_scene format=3 uid="uid://ojfrudqwx5y0"]
+
+[ext_resource type="PackedScene" uid="uid://bm8x6rwe1f37s" path="res://Assets/Hallway/scene.gltf" id="1_3q8tx"]
+[ext_resource type="Script" path="res://Assets/Hallway/vis.gd" id="2_fwqqa"]
+[ext_resource type="Script" uid="uid://v54ffyrek4aa" path="res://Scenes/Environments/Hallway/wrong_door_1.gd" id="2_wr0t0"]
+[ext_resource type="Script" uid="uid://bym35cdxnq5fl" path="res://Scenes/Environments/Hallway/right_door.gd" id="3_jncym"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wr0t0"]
+size = Vector3(400, 2.1044922, 400)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3q8tx"]
+size = Vector3(42, 85, 10)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fwqqa"]
+size = Vector3(34.394775, 78.51059, 1.1996155)
+
+[node name="Hallway" type="Node" unique_id=1156808042]
+
+[node name="Hallway" parent="." unique_id=711592189 instance=ExtResource("1_3q8tx")]
+transform = Transform3D(0.03, 0, 0, 0, 0.03, 0, 0, 0, 0.03, 0, 0, 0)
+script = ExtResource("2_fwqqa")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Hallway" unique_id=1003283238]
+
+[node name="WrongDoorLabel" type="Label" parent="Hallway/CanvasLayer" unique_id=4033675]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -51.0
+offset_top = -11.5
+offset_right = 51.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 48
+text = "Wrong Door!!"
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Hallway" unique_id=787603471]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hallway/StaticBody3D" unique_id=1428487367]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.4477539, 0)
+shape = SubResource("BoxShape3D_wr0t0")
+
+[node name="WrongDoor1" type="StaticBody3D" parent="Hallway" unique_id=734966107]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -80.18286, 39.520393, 176.87207)
+script = ExtResource("2_wr0t0")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hallway/WrongDoor1" unique_id=1356363982]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.24086, 0, 1.194046)
+shape = SubResource("BoxShape3D_3q8tx")
+
+[node name="WrongDoor2" type="StaticBody3D" parent="Hallway" unique_id=2062451256]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -104.27159, 39.520393, 2.3731232)
+script = ExtResource("2_wr0t0")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hallway/WrongDoor2" unique_id=790663990]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.24086, 0, 1.194046)
+shape = SubResource("BoxShape3D_3q8tx")
+
+[node name="WrongDoor3" type="StaticBody3D" parent="Hallway" unique_id=1621833273]
+transform = Transform3D(-4.371138e-08, 0, -0.9999998, 0, 1, 0, 0.9999998, 0, -4.371138e-08, 176.39098, 39.520393, 81.14491)
+script = ExtResource("2_wr0t0")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hallway/WrongDoor3" unique_id=1603474246]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.24086, 0, 1.194046)
+shape = SubResource("BoxShape3D_3q8tx")
+
+[node name="WrongDoor4" type="StaticBody3D" parent="Hallway" unique_id=1112397501]
+transform = Transform3D(-4.371138e-08, 0, -0.9999998, 0, 1, 0, 0.9999998, 0, -4.371138e-08, 177.89005, 39.520393, -99.58557)
+script = ExtResource("2_wr0t0")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hallway/WrongDoor4" unique_id=1079084823]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.24086, 0, 1.194046)
+shape = SubResource("BoxShape3D_3q8tx")
+
+[node name="WrongDoor5" type="StaticBody3D" parent="Hallway" unique_id=129587215]
+transform = Transform3D(-4.371138e-08, 0, -0.9999998, 0, 1, 0, 0.9999998, 0, -4.371138e-08, -0.6627768, 39.520393, -74.9274)
+script = ExtResource("2_wr0t0")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hallway/WrongDoor5" unique_id=1828484268]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.24086, 0, 1.194046)
+shape = SubResource("BoxShape3D_3q8tx")
+
+[node name="RightDoor" type="StaticBody3D" parent="Hallway" unique_id=92299880]
+transform = Transform3D(0.9999997, 0, 0, 0, 1, 0, 0, 0, 0.9999997, 76.053116, 39.520393, -182.60103)
+script = ExtResource("3_jncym")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hallway/RightDoor" unique_id=1959014214]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.24086, 0, 1.194046)
+shape = SubResource("BoxShape3D_3q8tx")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="Hallway" unique_id=316095470]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 91.954575, 38.373474, 182.08397)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hallway/StaticBody3D2" unique_id=328960505]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.168335, 4.2336617, -2.8581848)
+shape = SubResource("BoxShape3D_fwqqa")

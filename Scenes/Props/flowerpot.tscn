@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://baucl0br58big"]
+
+[ext_resource type="Script" uid="uid://c05oke8yhxt23" path="res://Scenes/Props/flowerpot.gd" id="1_ktmyf"]
+[ext_resource type="PackedScene" uid="uid://cbxsmy5ccu7ps" path="res://Assets/flowerpot/scene.gltf" id="1_l5pq4"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_l5pq4"]
+radius = 0.27001953
+height = 1.6279297
+
+[node name="Flowerpot" type="StaticBody3D"]
+script = ExtResource("1_ktmyf")
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("1_l5pq4")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5741936, 0)
+shape = SubResource("CapsuleShape3D_l5pq4")

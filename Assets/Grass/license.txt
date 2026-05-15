@@ -1,0 +1,11 @@
+Model Information:
+* title:	Clover Spring
+* source:	https://sketchfab.com/3d-models/clover-spring-ff99cb2d6b97453eb2220f5de0aed60c
+* author:	3dhdscan (https://sketchfab.com/3dhdscan)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Clover Spring" (https://sketchfab.com/3d-models/clover-spring-ff99cb2d6b97453eb2220f5de0aed60c) by 3dhdscan (https://sketchfab.com/3dhdscan) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

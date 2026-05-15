@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bqspj3fe1fus5"]
+
+[ext_resource type="PackedScene" uid="uid://coyfwx2pdabis" path="res://Assets/Grass/scene.gltf" id="1_rodum"]
+
+[node name="Grass" type="Node3D"]
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("1_rodum")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)

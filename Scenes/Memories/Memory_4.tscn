@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://hxsxvf6hu36w"]
+
+[ext_resource type="PackedScene" uid="uid://68hhbkr7r7oa" path="res://Scenes/Props/hosp.tscn" id="1_h6o21"]
+[ext_resource type="PackedScene" uid="uid://e3eprht740g0" path="res://Scenes/Characters/doc/doc.tscn" id="2_p0v4t"]
+[ext_resource type="Script" uid="uid://tkywusaoblhj" path="res://Scenes/Characters/doc/doc.gd" id="3_cc23u"]
+[ext_resource type="PackedScene" uid="uid://5fg6vruvh31j" path="res://Assets/OldWoman2/scene.gltf" id="3_p0v4t"]
+
+[node name="Memory4" type="Node3D" unique_id=2145137245]
+
+[node name="Hosp" parent="." unique_id=49875564 instance=ExtResource("1_h6o21")]
+
+[node name="doc" parent="." unique_id=688446855 node_paths=PackedStringArray("dialogue_label") instance=ExtResource("2_p0v4t")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -0.2234731, 0.025306076, -0.49701637)
+script = ExtResource("3_cc23u")
+dialogue_label = NodePath("../CanvasLayer/Label")
+
+[node name="Sketchfab_Scene" parent="." unique_id=915179656 instance=ExtResource("3_p0v4t")]
+transform = Transform3D(-0.48957366, 0, -0.34686843, 0, 0.6000001, 0, 0.34686843, 0, -0.48957366, 0.45582885, 0.35480708, 0.42394412)
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=709310410]
+transform = Transform3D(0.67904425, 0, -0.7340974, 0, 1, 0, 0.7340974, 0, 0.67904425, -0.37471944, 0.47779253, 0.43511617)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1417505177]
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=914914312]
+offset_left = 418.0
+offset_top = 539.0
+offset_right = 458.0
+offset_bottom = 562.0
+
+[node name="Label2" type="Label" parent="CanvasLayer" unique_id=1541096392]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -73.0
+offset_right = 73.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 0.78431374, 0.21568628, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 22
+text = "Playing Memories.."
+vertical_alignment = 1
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1379275775]
+transform = Transform3D(1, 0, 0, 0, 0.8927667, 0.4505192, 0, -0.4505192, 0.8927667, 0, 2.1610928, 1.7820671)

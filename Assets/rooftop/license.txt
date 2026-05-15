@@ -1,0 +1,11 @@
+Model Information:
+* title:	Rooftop Garden with Loft
+* source:	https://sketchfab.com/3d-models/rooftop-garden-with-loft-47f4fa5c8c7a4f5a8c49490179b2e52f
+* author:	MozillaHubs (https://sketchfab.com/mozillareality)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Rooftop Garden with Loft" (https://sketchfab.com/3d-models/rooftop-garden-with-loft-47f4fa5c8c7a4f5a8c49490179b2e52f) by MozillaHubs (https://sketchfab.com/mozillareality) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
